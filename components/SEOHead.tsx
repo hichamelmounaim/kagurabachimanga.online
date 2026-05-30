@@ -7,7 +7,7 @@ interface SEOHeadProps extends SEOMeta {
   ogImage?: string;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, canonicalUrl, ogType = 'website', ogImage = 'https://kagurabachimanga.online/logo.png' }) => {
+const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, canonicalUrl, ogType = 'website', ogImage = 'https://kagurabachimanga.online/kagurabachi-manga-logo.png' }) => {
   useEffect(() => {
     // Update Title
     document.title = `${title} | Kagurabachi Manga`;

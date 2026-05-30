@@ -1,0 +1,43 @@
+{
+  "mangaEdgeSlug": "w5baek-kagurabachi",
+  "history": [
+    {
+      "id": "zpu74ei",
+      "date": "2026-05-30T15:03:45.243Z",
+      "type": "scrape",
+      "description": "Scraped successfully. No new chapters found. Up to date!",
+      "details": {
+        "newChaptersCount": 0,
+        "newChapterNumbers": [],
+        "totalChapters": 122
+      }
+    },
+    {
+      "id": "buype8p",
+      "date": "2026-05-30T15:08:56.473Z",
+      "type": "scrape",
+      "description": "Scraped successfully. No new chapters found. Up to date!",
+      "details": {
+        "newChaptersCount": 0,
+        "newChapterNumbers": [],
+        "totalChapters": 122
+      }
+    },
+    {
+      "id": "x6bw8a2",
+      "date": "2026-05-30T16:17:16.418Z",
+      "type": "scrape",
+      "description": "Scraped successfully during bulk sync. Found 3 new chapter(s): Ch. 58.5, Ch. 92.5, Ch. 112.5.",
+      "details": {
+        "newChaptersCount": 3,
+        "newChapterNumbers": [
+          58.5,
+          92.5,
+          112.5
+        ],
+        "totalChapters": 125,
+        "bulkSync": true
+      }
+    }
+  ]
+}

@@ -80,7 +80,7 @@ const ChapterReader: React.FC = () => {
         title={`Kagurabachi Manga Chapter ${chapter.number} - Read Online`}
         description={`Read Kagurabachi Manga Chapter ${chapter.number}: ${chapter.title} online in high quality free. Official English scans available.`}
         canonicalUrl={`https://kagurabachimanga.online/chapter/${chapter.number}`}
-        ogImage={chapter.pages[0] || 'https://kagurabachimanga.online/logo.png'}
+        ogImage={chapter.pages[0] || 'https://kagurabachimanga.online/kagurabachi-manga-logo.png'}
         schema={{
           "@context": "https://schema.org",
           "@type": "ComicIssue",
