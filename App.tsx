@@ -55,13 +55,7 @@ const App: React.FC = () => {
                 <Route path="/dmca" element={<LayoutWrapper><Legal type="dmca" /></LayoutWrapper>} />
                 <Route path="/disclaimer" element={<LayoutWrapper><Legal type="disclaimer" /></LayoutWrapper>} />
 
-                {/* Reader often needs less layout distraction, but keeping Nav for consistency. 
-                    Could make a dedicated ReaderLayout here. */}
-                <Route path="/chapter/:chapterId" element={
-                  <>
-                    <ChapterReader />
-                  </>
-                } />
+                <Route path="/chapter/:chapterId" element={<ChapterReader />} />
               </Routes>
             </Suspense>
           </div>

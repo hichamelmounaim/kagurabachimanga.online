@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Users, Star, MessageCircle, Bookmark } from 'lucide-react';
+import { ArrowRight, BookOpen, Star, MessageCircle, Bookmark } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { useManga } from '../context/MangaContext';
-import { ARCS } from '../constants';
 
 const Home: React.FC = () => {
   const { chapters } = useManga();
@@ -12,8 +11,8 @@ const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Kagurabachi Manga - Read Online High Quality"
-        description="Read Kagurabachi Manga online in high quality. All 125 chapters free, no sign-up required. Follow Chihiro's revenge quest against the sorcerer group Hishaku."
+        title="Kagurabachi Manga - Read Online Free, All Chapters"
+        description="Read Kagurabachi Manga online free in high quality. All chapters from Vol 1 to the latest — no sign-up required. The #1 site to read Kagurabachi manga online."
         canonicalUrl="https://kagurabachimanga.online/"
         schema={{
           "@context": "https://schema.org",
@@ -38,26 +37,23 @@ const Home: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-bb-dark py-20">
-        <div className="absolute inset-0 z-0 opacity-30 select-none pointer-events-none">
-          <img
-            src="/kagurabachi.webp"
-            alt=""
-            width="1920"
-            height="1080"
-            fetchPriority="high"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-bb-dark via-bb-dark/60 to-transparent z-0 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-bb-dark via-bb-dark/80 to-bb-dark/40 z-0 pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
 
-          <h1 className="text-5xl md:text-8xl font-heading font-bold text-white mb-4 drop-shadow-2xl tracking-tighter text-center">
-            KAGURABACHI <span className="text-bb-blue">MANGA</span>
-          </h1>
+          <img
+            src="/kagurabachi-manga-logo.png"
+            alt="Kagurabachi Manga"
+            width="600"
+            height="240"
+            fetchPriority="high"
+            className="w-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mb-6 drop-shadow-2xl"
+          />
+
+          <h1 className="sr-only">Kagurabachi Manga - Read Online High Quality</h1>
 
           <p className="text-gray-300 text-lg md:text-xl max-w-3xl text-center mb-10 font-light leading-relaxed">
-            Read Kagurabachi Manga Online In High Quality, All Chapters and Volumes in English With HD scans and No Sign-Up Required.
+            Read <strong className="text-white font-semibold">Kagurabachi manga online free</strong> — all chapters from Vol 1 to the latest release, in English with HD scans. No sign-up required.
           </p>
 
           {/* Info Card - Dark by default, Light/Dark supported if needed, but keeping Dark for Hero */}
@@ -127,8 +123,7 @@ const Home: React.FC = () => {
                 <div className="w-px h-12 bg-white/10 lg:w-16 lg:h-px"></div>
                 <button
                   onClick={() => {
-                    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-                    alert(`Press ${isMac ? 'Cmd' : 'Ctrl'} + D to bookmark this page!`);
+                    alert('Press Ctrl+D (or Cmd+D on Mac) to bookmark this page!');
                   }}
                   className="text-center group cursor-pointer w-full focus:outline-none"
                   aria-label="Bookmark this page"
@@ -164,7 +159,6 @@ const Home: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-        {/* Latest Chapters Grid */}
         {/* Latest Chapters Grid */}
         <section className="mb-16">
           <div className="flex items-center justify-between mb-8">
@@ -250,16 +244,30 @@ const Home: React.FC = () => {
             </div>
 
             <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Is the Kagurabachi Manga Finished?</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Is Kagurabachi Manga Cancelled?</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                No, the <strong>Kagurabachi manga</strong> is currently ongoing. New chapters are released in Weekly Shonen Magazine.
+                No — <strong>Kagurabachi manga is not cancelled</strong>. It is actively ongoing and serialized weekly in Weekly Shōnen Jump. New chapters continue to release regularly.
               </p>
             </div>
 
             <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Where should I start reading?</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                If you are new to the series, start with <Link to="/chapter/1" className="text-bb-blue hover:underline">Chapter 1</Link>. The story builds progressively, so starting from the beginning is highly recommended to fully appreciate the character development and relationships.
+                Start with <Link to="/chapter/1" className="text-bb-blue hover:underline">Chapter 1 (Vol 1)</Link> for the full experience. The story builds progressively — reading from the beginning is essential to appreciate the character growth and the enchanted blades lore.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Where to read Kagurabachi officially?</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                The official English release is available on <strong>Viz Media</strong> and <strong>Manga Plus</strong> for the latest simulcast chapters. You can read the full archive here on <strong>kagurabachimanga.online</strong> — all chapters, free online.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">What manga is similar to Kagurabachi?</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                If you enjoy <strong>Kagurabachi</strong>, you'll likely love <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, and <em>Blue Exorcist</em> — all feature a protagonist-driven revenge arc, supernatural swordplay, and dark fantasy themes similar to Kagurabachi's unique style.
               </p>
             </div>
           </div>
@@ -271,17 +279,17 @@ const Home: React.FC = () => {
             <h2 className="text-3xl font-heading font-bold text-gray-900 dark:text-white mb-6">Read Kagurabachi Manga Online Free</h2>
             <div className="prose prose-lg dark:prose-invert text-gray-700 dark:text-gray-300 max-w-none space-y-4">
               <p>
-                Welcome to <strong>kagurabachimanga.online</strong>, the premier destination for fans to <strong className="text-bb-blue">Read Kagurabachi Manga</strong> online. We provide high-quality scans of the latest chapters as soon as they are released. Join millions of fans worldwide in following the journey of Chihiro Rokuhira.
+                Welcome to <strong>kagurabachimanga.online</strong> — the best place to <strong className="text-bb-blue">read Kagurabachi manga online free</strong>. We host high-quality scans of every chapter, from <strong>Kagurabachi manga Vol 1</strong> all the way to the latest release, updated as soon as new chapters drop. No ads blocking your panels, no sign-up required.
               </p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">What is Kagurabachi?</h3>
               <p>
-                Chihiro Rokuhira, a young boy seeking vengeance for his father's death, uses one of the six enchanted blades crafted by his father to fight a group of rogue sorcerers.
+                <strong>Kagurabachi</strong> is a dark-fantasy action manga by <strong>Takeru Hokazono</strong>, serialized in Weekly Shōnen Jump since 2023. The story follows Chihiro Rokuhira, who wields one of six enchanted blades forged by his father to hunt down the rogue sorcerer group Hishaku. Its iconic <strong>manga panels</strong> — fluid swordplay mixed with sorcery — have made it one of the fastest-rising series in Jump history.
               </p>
 
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Why is Kagurabachi So Popular?</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Why Read Kagurabachi Manga Here?</h3>
               <p>
-                Created by <strong className="text-gray-900 dark:text-white">Takeru Hokazono</strong>, <em>Kagurabachi</em> deconstructs standard tropes, highlighting individual drive and unique storytelling. Combined with exceptional, dynamic art style, it has become a global phenomenon.
+                Unlike <strong>Viz</strong> or <strong>Manga Plus</strong> which limit the archive, <strong>kagurabachimanga.online</strong> lets you <strong>read Kagurabachi manga online</strong> — all chapters, completely free. Our reader is optimized for mobile and desktop, loads every <strong>manga panel</strong> in HD, and works without an account. Whether you're catching up from <strong>Vol 1</strong> or following the weekly drops, this is the fastest, cleanest reading experience available.
               </p>
             </div>
           </div>

@@ -22,14 +22,14 @@ const MangaList: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-[#0a0a0a]">
       <SEOHead
-        title="Kagurabachi Manga - All 125 Chapters | Read Online Free"
-        description="Browse all 125 Kagurabachi chapters online. Read from Chapter 1 to Chapter 125 in English with HD quality scans. Updated 2026-05-26."
+        title="Read Kagurabachi Manga Online Free - All Chapters List"
+        description="Read Kagurabachi manga online free — complete chapter list from Vol 1 to the latest. HD scans, no sign-up needed. Browse all Kagurabachi manga chapters."
         canonicalUrl="https://kagurabachimanga.online/manga"
         schema={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Kagurabachi Manga - All Chapters",
-          "description": "Browse all 125 Kagurabachi chapters online. Read from Chapter 1 to Chapter 125 in English with HD quality scans. Updated 2026-05-26.",
+          "name": "Kagurabachi Manga - All Chapters | Read Online Free",
+          "description": "Read Kagurabachi manga online free — complete chapter list from Vol 1 to the latest. HD scans, no sign-up needed.",
           "url": "https://kagurabachimanga.online/manga",
           "isPartOf": {
             "@type": "WebSite",
@@ -52,7 +52,7 @@ const MangaList: React.FC = () => {
             KAGURABACHI <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">MANGA Library</span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
-            Read every chapter of the Kagurabachi Manga by Takeru Hokazono. From the very beginning to the latest release.
+            Read <strong className="text-white font-semibold">Kagurabachi manga online free</strong> — every chapter from Vol 1 to the latest, by Takeru Hokazono. HD scans, no sign-up required.
           </p>
         </div>
       </div>
