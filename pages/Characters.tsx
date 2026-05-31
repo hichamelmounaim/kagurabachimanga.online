@@ -43,29 +43,28 @@ const Characters: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {CHARACTERS.map((char) => (
-          <div key={char.id} className="group flex flex-col bg-[#1a1a1a] rounded-xl border border-white/5 p-6 hover:border-bb-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-bb-blue/10">
-            <div className="flex justify-between items-start mb-4">
-              <div className="flex flex-col gap-2">
-                <h2 className="text-2xl font-bold text-white group-hover:text-bb-blue transition-colors">
-                  {char.name}
-                </h2>
-                <span className="self-start px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-[#3b82f6] bg-[#3b82f6]/10 rounded-md">
+          <div key={char.id} className="group flex flex-col bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 hover:border-bb-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-bb-blue/10">
+            <div className="aspect-[3/4] relative overflow-hidden bg-gray-800">
+              <img 
+                src={char.image} 
+                alt={`${char.name} - Kagurabachi`} 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/40 to-transparent opacity-90" />
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                <span className="inline-block px-2 py-1 bg-bb-blue/90 text-white text-[10px] font-bold uppercase tracking-wider rounded mb-2">
                   {char.role}
                 </span>
+                <h2 className="text-2xl font-bold text-white leading-tight mb-1">{char.name}</h2>
+                <p className="text-gray-300 text-xs font-medium uppercase tracking-wide">{char.grade}</p>
               </div>
-              <span className="px-3 py-1 text-xs font-medium text-gray-400 bg-white/5 rounded-full border border-white/5">
-                {char.role}
-              </span>
             </div>
-
-            <p className="text-gray-400 text-sm leading-relaxed flex-1 mb-8">
-              {char.description}
-            </p>
-
-            <div className="pt-4 border-t border-white/5">
-              <button className="text-sm font-bold text-white hover:text-bb-blue transition-colors flex items-center gap-2 group-hover:translate-x-1 duration-200">
-                Read Full Profile <ArrowRight className="w-4 h-4" />
-              </button>
+            
+            <div className="p-6 flex-1 flex flex-col">
+              <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                {char.description}
+              </p>
             </div>
           </div>
         ))}
