@@ -36,24 +36,23 @@ const Home: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-bb-dark py-20">
+      <section 
+        className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-bb-dark py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/kagurabachi-manga-cover.webp")' }}
+      >
         <div className="absolute inset-0 bg-gradient-to-t from-bb-dark via-bb-dark/80 to-bb-dark/40 z-0 pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
 
-          <img
-            src="/kagurabachi-manga-logo.png"
-            alt="Kagurabachi Manga"
-            width="600"
-            height="240"
-            fetchPriority="high"
-            className="w-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mb-6 drop-shadow-2xl"
-          />
 
-          <h1 className="sr-only">Kagurabachi Manga - Read Online High Quality</h1>
 
-          <p className="text-gray-300 text-lg md:text-xl max-w-3xl text-center mb-10 font-light leading-relaxed">
-            Read <strong className="text-white font-semibold">Kagurabachi manga online free</strong> — all chapters from Vol 1 to the latest release, in English with HD scans. No sign-up required.
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-heading font-black text-center uppercase tracking-tighter mb-4 drop-shadow-2xl leading-none">
+            <span className="text-white">KAGURABACHI</span> <span className="text-bb-blue">MANGA</span>
+          </h1>
+
+          <p className="text-gray-200 text-lg md:text-xl max-w-4xl text-center mb-10 font-medium leading-relaxed drop-shadow-md">
+            Read Kagurabachi Manga Online In High Quality, All Chapters and Volumes in<br className="hidden sm:block" />
+            English With HD scans and No Sign-Up Required.
           </p>
 
           {/* Info Card - Dark by default, Light/Dark supported if needed, but keeping Dark for Hero */}
