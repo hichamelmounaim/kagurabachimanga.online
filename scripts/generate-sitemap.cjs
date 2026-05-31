@@ -8,19 +8,22 @@ const mangaData = JSON.parse(
   fs.readFileSync(path.join(__dirname, '../public/scraped_w5baek-kagurabachi.json'), 'utf-8')
 );
 
-const SERIES_START = new Date('2023-08-18T00:00:00Z').getTime();
-const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
+const SERIES_START = new Date('2023-09-19T00:00:00Z').getTime();
+const NOW = new Date().getTime();
 const TODAY = new Date().toISOString().split('T')[0];
 
-// Build chapter list with release dates
-const chapters = [...mangaData.chapters]
-  .sort((a, b) => a.chapter_number - b.chapter_number)
-  .map(ch => ({
+const sortedChapters = [...mangaData.chapters].sort((a, b) => a.chapter_number - b.chapter_number);
+const totalChapters = sortedChapters.length;
+
+// Build chapter list with release dates interpolated between SERIES_START and NOW
+const chapters = sortedChapters.map((ch, index) => {
+  const fraction = totalChapters > 1 ? index / (totalChapters - 1) : 1;
+  const releaseTime = SERIES_START + (NOW - SERIES_START) * fraction;
+  return {
     number: ch.chapter_number,
-    releaseDate: new Date(SERIES_START + (ch.chapter_number - 1) * MS_PER_WEEK)
-      .toISOString()
-      .split('T')[0],
-  }));
+    releaseDate: new Date(releaseTime).toISOString().split('T')[0],
+  };
+});
 
 const latestChapterNum = chapters[chapters.length - 1].number;
 const recentThreshold = latestChapterNum - 10;
@@ -40,12 +43,12 @@ function chapterChangefreq(num) {
 const staticPages = [
   ['',            '1.0', 'daily',   TODAY],
   ['/manga',      '0.9', 'daily',   TODAY],
-  ['/characters', '0.8', 'monthly', '2025-01-01'],
-  ['/about',      '0.7', 'monthly', '2025-01-01'],
-  ['/terms',      '0.3', 'yearly',  '2024-01-01'],
-  ['/privacy',    '0.3', 'yearly',  '2024-01-01'],
-  ['/dmca',       '0.3', 'yearly',  '2024-01-01'],
-  ['/disclaimer', '0.3', 'yearly',  '2024-01-01'],
+  ['/characters', '0.8', 'monthly', TODAY],
+  ['/about',      '0.7', 'monthly', TODAY],
+  ['/terms',      '0.3', 'yearly',  TODAY],
+  ['/privacy',    '0.3', 'yearly',  TODAY],
+  ['/dmca',       '0.3', 'yearly',  TODAY],
+  ['/disclaimer', '0.3', 'yearly',  TODAY],
 ];
 
 let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
