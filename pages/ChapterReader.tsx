@@ -78,15 +78,15 @@ const ChapterReader: React.FC = () => {
     <div className="bg-gray-100 dark:bg-[#121212] min-h-screen flex flex-col">
       <SEOHead
         title={`Kagurabachi Chapter ${chapter.number} – ${chapter.title} | Read Online Free`}
-        description={`Read Kagurabachi Chapter ${chapter.number} – ${chapter.title} for free in English. HD scans, no sign-up required. Read previous and next chapters at kagurabachimanga.online.`}
-        canonicalUrl={`https://kagurabachimanga.online/chapter/${chapter.number}`}
+        description={`Read Kagurabachi Chapter ${chapter.number} – ${chapter.title} for free in English. HD scans, no sign-up required. Read previous and next chapters at www.kagurabachimanga.online.`}
+        canonicalUrl={`https://www.kagurabachimanga.online/chapter/${chapter.number}`}
         ogType="article"
-        ogImage={chapter.pages[0] || 'https://kagurabachimanga.online/kagurabachi-manga-logo.png'}
+        ogImage={chapter.pages[0] || 'https://www.kagurabachimanga.online/kagurabachi-manga-logo.png'}
         schema={{
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": `Kagurabachi Chapter ${chapter.number}: ${chapter.title}`,
-          "image": chapter.pages[0] || 'https://kagurabachimanga.online/kagurabachi-manga-logo.png',
+          "image": chapter.pages[0] || 'https://www.kagurabachimanga.online/kagurabachi-manga-logo.png',
           "datePublished": chapter.releaseDate,
           "author": {
             "@type": "Person",
@@ -97,7 +97,7 @@ const ChapterReader: React.FC = () => {
             "name": "Kagurabachi Manga",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://kagurabachimanga.online/kagurabachi-manga-logo.png"
+              "url": "https://www.kagurabachimanga.online/kagurabachi-manga-logo.png"
             }
           },
           "isPartOf": {
@@ -105,23 +105,23 @@ const ChapterReader: React.FC = () => {
             "name": "Kagurabachi",
             "author": { "@type": "Person", "name": "Takeru Hokazono" }
           },
-          "url": `https://kagurabachimanga.online/chapter/${chapter.number}`
+          "url": `https://www.kagurabachimanga.online/chapter/${chapter.number}`
         }}
         schemas={[
           {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kagurabachimanga.online/" },
-              { "@type": "ListItem", "position": 2, "name": "Kagurabachi Manga", "item": "https://kagurabachimanga.online/manga" },
-              { "@type": "ListItem", "position": 3, "name": `Chapter ${chapter.number}`, "item": `https://kagurabachimanga.online/chapter/${chapter.number}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kagurabachimanga.online/" },
+              { "@type": "ListItem", "position": 2, "name": "Kagurabachi Manga", "item": "https://www.kagurabachimanga.online/manga" },
+              { "@type": "ListItem", "position": 3, "name": `Chapter ${chapter.number}`, "item": `https://www.kagurabachimanga.online/chapter/${chapter.number}` }
             ]
           },
           ...(prevChapter ? [{
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "url": `https://kagurabachimanga.online/chapter/${chapter.number}`,
-            "relatedLink": `https://kagurabachimanga.online/chapter/${prevChapter.number}`
+            "url": `https://www.kagurabachimanga.online/chapter/${chapter.number}`,
+            "relatedLink": `https://www.kagurabachimanga.online/chapter/${prevChapter.number}`
           }] : [])
         ]}
       />

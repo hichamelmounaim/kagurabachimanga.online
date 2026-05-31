@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 <li><Link to="/terms" className="hover:text-bb-blue transition-colors">Terms & Conditions</Link></li>
                 <li><Link to="/dmca" className="hover:text-bb-blue transition-colors">DMCA</Link></li>
                 <li><Link to="/disclaimer" className="hover:text-bb-blue transition-colors">Disclaimer</Link></li>
-                <li><a href="mailto:Support@kagurabachimanga.online" className="hover:text-bb-blue transition-colors">Contact</a></li>
+                <li><a href="mailto:Support@www.kagurabachimanga.online" className="hover:text-bb-blue transition-colors">Contact</a></li>
               </ul>
             </div>
           </div>

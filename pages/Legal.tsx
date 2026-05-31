@@ -53,7 +53,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
                                 <li>A statement that the information in the notification is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
                             </ul>
 
-                            <p className="mb-4">Please submit your info to: <strong>Support@kagurabachimanga.online</strong></p>
+                            <p className="mb-4">Please submit your info to: <strong>Support@www.kagurabachimanga.online</strong></p>
                             <p className="mb-4">UNDER FEDERAL LAW, IF YOU KNOWINGLY MISREPRESENT THAT ONLINE MATERIAL IS INFRINGING, YOU MAY BE SUBJECT TO CRIMINAL PROSECUTION FOR PERJURY AND CIVIL PENALTIES, INCLUDING MONETARY DAMAGES, COURT COSTS, AND ATTORNEYS' FEES.</p>
                         </>
                     )
@@ -63,7 +63,7 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
                     title: "Disclaimer",
                     content: (
                         <>
-                            <p className="mb-4">If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at Support@kagurabachimanga.online.</p>
+                            <p className="mb-4">If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at Support@www.kagurabachimanga.online.</p>
 
                             <h2 className="text-xl font-bold mt-6 mb-3">Fair Use Notice</h2>
                             <p className="mb-4">This website may contain copyrighted material the use of which has not always been specifically authorized by the copyright owner. We are making such material available in an effort to advance understanding of anime, manga, and cultural topics. We believe this constitutes a 'fair use' of any such copyrighted material as provided for in section 107 of the US Copyright Law.</p>
@@ -110,12 +110,12 @@ const Legal: React.FC<LegalProps> = ({ type }) => {
             <SEOHead
                 title={`${title} - Kagurabachi Manga`}
                 description={
-                    type === 'privacy' ? 'Privacy policy for kagurabachimanga.online — how we collect, use, and protect your data when you read Kagurabachi online.' :
-                    type === 'dmca' ? 'DMCA copyright policy for kagurabachimanga.online. Submit takedown requests for Kagurabachi content to our designated agent.' :
-                    type === 'disclaimer' ? 'Disclaimer for kagurabachimanga.online. This fan site is not affiliated with Hokazono Takeru, Weekly Shōnen Jump, or their partners.' :
-                    'Terms and conditions governing your use of kagurabachimanga.online, the free Kagurabachi manga reading site.'
+                    type === 'privacy' ? 'Privacy policy for www.kagurabachimanga.online — how we collect, use, and protect your data when you read Kagurabachi online.' :
+                    type === 'dmca' ? 'DMCA copyright policy for www.kagurabachimanga.online. Submit takedown requests for Kagurabachi content to our designated agent.' :
+                    type === 'disclaimer' ? 'Disclaimer for www.kagurabachimanga.online. This fan site is not affiliated with Hokazono Takeru, Weekly Shōnen Jump, or their partners.' :
+                    'Terms and conditions governing your use of www.kagurabachimanga.online, the free Kagurabachi manga reading site.'
                 }
-                canonicalUrl={`https://kagurabachimanga.online/${type}`}
+                canonicalUrl={`https://www.kagurabachimanga.online/${type}`}
             />
             <h1 className="text-3xl md:text-4xl font-bold mb-8 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-4">{title}</h1>
             <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">

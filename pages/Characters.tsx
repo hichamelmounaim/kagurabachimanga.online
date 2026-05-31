@@ -9,17 +9,17 @@ const Characters: React.FC = () => {
       <SEOHead
         title="Kagurabachi Characters Guide — Chihiro, Hishaku & All Cast"
         description="Complete Kagurabachi character guide. Chihiro Rokuhira, Shiba, Hakuri Sazanami, Hishaku members, enchanted blade bearers and more — profiles, abilities, and backstories."
-        canonicalUrl="https://kagurabachimanga.online/characters"
+        canonicalUrl="https://www.kagurabachimanga.online/characters"
         schema={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           "name": "Kagurabachi Characters Guide — Chihiro, Hishaku & All Cast",
           "description": "Complete Kagurabachi character guide with profiles, abilities, and backstories for every major character.",
-          "url": "https://kagurabachimanga.online/characters",
+          "url": "https://www.kagurabachimanga.online/characters",
           "isPartOf": {
             "@type": "WebSite",
             "name": "Kagurabachi Manga",
-            "url": "https://kagurabachimanga.online/"
+            "url": "https://www.kagurabachimanga.online/"
           }
         }}
         schemas={[
@@ -27,8 +27,8 @@ const Characters: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kagurabachimanga.online/" },
-              { "@type": "ListItem", "position": 2, "name": "Characters", "item": "https://kagurabachimanga.online/characters" }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kagurabachimanga.online/" },
+              { "@type": "ListItem", "position": 2, "name": "Characters", "item": "https://www.kagurabachimanga.online/characters" }
             ]
           }
         ]}

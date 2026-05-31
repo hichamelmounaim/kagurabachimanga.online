@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     },
     {
       question: 'Why Read Kagurabachi Manga on this Site?',
-      answer: 'kagurabachimanga.online offers high-quality scans of every chapter, from Vol 1 to the latest, with no sign-up required. Our reader is optimized for mobile and desktop, with fast loading and clean layout.',
+      answer: 'www.kagurabachimanga.online offers high-quality scans of every chapter, from Vol 1 to the latest, with no sign-up required. Our reader is optimized for mobile and desktop, with fast loading and clean layout.',
     },
     {
       question: 'Is Kagurabachi Manga Cancelled?',
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
     },
     {
       question: 'Where to read Kagurabachi officially?',
-      answer: 'The official English release is available on Viz Media and Manga Plus for the latest simulcast chapters. You can read the full archive here on kagurabachimanga.online — all chapters, free online.',
+      answer: 'The official English release is available on Viz Media and Manga Plus for the latest simulcast chapters. You can read the full archive here on www.kagurabachimanga.online — all chapters, free online.',
     },
     {
       question: 'What manga is similar to Kagurabachi?',
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
       <SEOHead
         title="Read Kagurabachi Manga Online Free in English | All Chapters"
         description={`Read Kagurabachi manga online for free in English. All ${chapterCount}+ chapters available. Chihiro's revenge story — the viral Shonen Jump hit by Takeru Hokazono.`}
-        canonicalUrl="https://kagurabachimanga.online/"
+        canonicalUrl="https://www.kagurabachimanga.online/"
         schema={{
           "@context": "https://schema.org",
           "@type": "Book",
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
           "numberOfPages": chapterCount,
           "description": "Chihiro Rokuhira seeks revenge against the Hishaku sorcerers who killed his father and stole the Enchanted Blades.",
           "award": "10th Next Manga Award — Print Category",
-          "url": "https://kagurabachimanga.online/"
+          "url": "https://www.kagurabachimanga.online/"
         }}
         schemas={[
           {
@@ -89,12 +89,12 @@ const Home: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Kagurabachi Manga",
-            "url": "https://kagurabachimanga.online/",
+            "url": "https://www.kagurabachimanga.online/",
             "potentialAction": {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://kagurabachimanga.online/manga?q={search_term_string}"
+                "urlTemplate": "https://www.kagurabachimanga.online/manga?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             }
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
                 "@type": "Person",
                 "name": char.name,
                 "description": char.description,
-                "image": `https://kagurabachimanga.online${char.image}`
+                "image": `https://www.kagurabachimanga.online${char.image}`
               }
             }))
           }
@@ -387,7 +387,7 @@ const Home: React.FC = () => {
             <h2 className="text-3xl font-heading font-bold text-gray-900 dark:text-white mb-6">Read Kagurabachi Manga Online Free</h2>
             <div className="prose prose-lg dark:prose-invert text-gray-700 dark:text-gray-300 max-w-none space-y-4">
               <p>
-                Welcome to <strong>kagurabachimanga.online</strong> — the best place to <strong className="text-bb-blue">read Kagurabachi manga online free</strong>. We host high-quality scans of every chapter, from <strong>Kagurabachi manga Vol 1</strong> all the way to the latest release, updated as soon as new chapters drop. No sign-up required.
+                Welcome to <strong>www.kagurabachimanga.online</strong> — the best place to <strong className="text-bb-blue">read Kagurabachi manga online free</strong>. We host high-quality scans of every chapter, from <strong>Kagurabachi manga Vol 1</strong> all the way to the latest release, updated as soon as new chapters drop. No sign-up required.
               </p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">What is Kagurabachi?</h3>
@@ -397,7 +397,7 @@ const Home: React.FC = () => {
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Why Read Kagurabachi Manga Here?</h3>
               <p>
-                Unlike <strong>Viz</strong> or <strong>Manga Plus</strong> which limit the archive, <strong>kagurabachimanga.online</strong> lets you <strong>read Kagurabachi manga online</strong> — all {chapterCount}+ chapters, completely free. Our reader is optimized for mobile and desktop, loads every manga panel in HD, and works without an account. Whether you're catching up from <strong>Vol 1</strong> or following the weekly drops, this is the fastest, cleanest reading experience available. Also searchable as <em>kagura bachi</em> or <em>kagurabachi english</em>.
+                Unlike <strong>Viz</strong> or <strong>Manga Plus</strong> which limit the archive, <strong>www.kagurabachimanga.online</strong> lets you <strong>read Kagurabachi manga online</strong> — all {chapterCount}+ chapters, completely free. Our reader is optimized for mobile and desktop, loads every manga panel in HD, and works without an account. Whether you're catching up from <strong>Vol 1</strong> or following the weekly drops, this is the fastest, cleanest reading experience available. Also searchable as <em>kagura bachi</em> or <em>kagurabachi english</em>.
               </p>
             </div>
           </div>

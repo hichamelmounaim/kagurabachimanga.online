@@ -8,7 +8,7 @@ interface SEOHeadProps extends SEOMeta {
   schemas?: object[];
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, schemas, canonicalUrl, ogType = 'website', ogImage = 'https://kagurabachimanga.online/kagurabachi-manga-logo.png' }) => {
+const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, schemas, canonicalUrl, ogType = 'website', ogImage = 'https://www.kagurabachimanga.online/kagurabachi-manga-logo.png' }) => {
   useEffect(() => {
     // Update Title
     document.title = title;

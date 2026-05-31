@@ -8,7 +8,7 @@ const About: React.FC = () => {
             <SEOHead
                 title="Kagurabachi Manga — Story, Characters, Volumes & Release Info"
                 description="Kagurabachi (カグラバチ) by Takeru Hokazono. Serialized in Weekly Shonen Jump since Sept 2023. 122+ chapters, Next Manga Award winner. Read free online."
-                canonicalUrl="https://kagurabachimanga.online/about"
+                canonicalUrl="https://www.kagurabachimanga.online/about"
                 schema={{
                     "@context": "https://schema.org",
                     "@type": "Book",
@@ -27,15 +27,15 @@ const About: React.FC = () => {
                     "inLanguage": "ja",
                     "description": "Chihiro Rokuhira seeks revenge against the Hishaku sorcerers who killed his father and stole the Enchanted Blades.",
                     "award": "10th Next Manga Award — Print Category",
-                    "url": "https://kagurabachimanga.online/about"
+                    "url": "https://www.kagurabachimanga.online/about"
                 }}
                 schemas={[
                     {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         "itemListElement": [
-                            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kagurabachimanga.online/" },
-                            { "@type": "ListItem", "position": 2, "name": "About Kagurabachi", "item": "https://kagurabachimanga.online/about" }
+                            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kagurabachimanga.online/" },
+                            { "@type": "ListItem", "position": 2, "name": "About Kagurabachi", "item": "https://www.kagurabachimanga.online/about" }
                         ]
                     }
                 ]}
@@ -159,8 +159,8 @@ const About: React.FC = () => {
 
                 <p>
                     Questions or feedback? Email us at{' '}
-                    <a href="mailto:Support@kagurabachimanga.online" className="text-bb-blue hover:underline">
-                        Support@kagurabachimanga.online
+                    <a href="mailto:Support@www.kagurabachimanga.online" className="text-bb-blue hover:underline">
+                        Support@www.kagurabachimanga.online
                     </a>
                 </p>
 
