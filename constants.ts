@@ -18,36 +18,68 @@ export const MOCK_CHAPTERS: Chapter[] = [...mangaData.chapters]
 
 export const CHARACTERS: Character[] = [
   {
-    "id": "chihiro",
+    "id": "314801",
     "name": "Chihiro Rokuhira",
-    "role": "Protagonist",
-    "grade": "Swordsman",
-    "description": "The wielder of the Enchanted Blade Enten, seeking revenge for his father's murder.",
-    "image": "https://picsum.photos/400/600?random=10"
-  },
-  {
-    "id": "shiba",
-    "name": "Shiba",
-    "role": "Ally",
-    "grade": "Sorcerer",
-    "description": "A close friend of Chihiro's father and a powerful sorcerer who assists Chihiro on his mission.",
-    "image": "https://picsum.photos/400/600?random=11"
-  },
-  {
-    "id": "char",
-    "name": "Char Kyonagi",
     "role": "Main Character",
-    "grade": "Survivor",
-    "description": "A young girl with unique healing powers who is protected by Chihiro.",
-    "image": "https://picsum.photos/400/600?random=12"
+    "grade": "Swordsman",
+    "description": "Son and apprentice of the master swordsmith Kunishige Rokuhira. Wielder of the Enchanted Blade Enten, and a user of the Iai White Purity Style.",
+    "image": "/characters/314801.jpg"
   },
   {
-    "id": "sojo",
-    "name": "Sojo Genichi",
-    "role": "Villain",
-    "grade": "Antagonist",
-    "description": "A ruthless arms dealer who wields the Enchanted Blade Cloud Gouger and clashes with Chihiro.",
-    "image": "https://picsum.photos/400/600?random=13"
+    "id": "326181",
+    "name": "Hakuri Sazanami",
+    "role": "Main Character",
+    "grade": "Sorcerer",
+    "description": "A young man disowned from the Sazanami clan. He witnessed Chihiro's bravery and was inspired by him, possessing two rare sorceries.",
+    "image": "/characters/326181.jpg"
+  },
+  {
+    "id": "314802",
+    "name": "Togo Shiba",
+    "role": "Supporting Character",
+    "grade": "Veteran Sorcerer",
+    "description": "Old friend of Kunishige Rokuhira, a former member of the Kamunabi, and a Seitei War veteran. He assists Chihiro.",
+    "image": "/characters/314802.jpg"
+  },
+  {
+    "id": "314803",
+    "name": "Kunishige Rokuhira",
+    "role": "Supporting Character",
+    "grade": "Master Swordsmith",
+    "description": "Master swordsmith who forged the six Enchanted Blades with a special technique known to no one else. Father of Chihiro.",
+    "image": "/characters/314803.jpg"
+  },
+  {
+    "id": "316062",
+    "name": "Char Kyounagi",
+    "role": "Supporting Character",
+    "grade": "Survivor",
+    "description": "A young orphan girl with unique regeneration powers living on the streets who was hunted for her abilities.",
+    "image": "/characters/316062.jpg"
+  },
+  {
+    "id": "317244",
+    "name": "Genichi Soujou",
+    "role": "Antagonist",
+    "grade": "Weapons Dealer",
+    "description": "A prominent weapons dealer who controls the underworld. He wielded the enchanted blade Cloud Gouger.",
+    "image": "/characters/317244.jpg"
+  },
+  {
+    "id": "325470",
+    "name": "Hiyuki Kagari",
+    "role": "Supporting Character",
+    "grade": "Kamunabi Elite",
+    "description": "Stated to be the 'strongest fighter of the Kamunabi', she wields the Flame Bone of the Starving, rivaling Enchanted Blades.",
+    "image": "/characters/325470.jpg"
+  },
+  {
+    "id": "318348",
+    "name": "Soushirou Azami",
+    "role": "Supporting Character",
+    "grade": "Kamunabi Agent",
+    "description": "An elite member of the Kamunabi who aids in tracking the Enchanted Blades.",
+    "image": "/characters/318348.jpg"
   }
 ];
 

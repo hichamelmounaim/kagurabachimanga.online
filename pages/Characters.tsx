@@ -7,9 +7,31 @@ const Characters: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <SEOHead
-        title="Kagurabachi Characters - Meet the Cast"
-        description="Meet the characters of Kagurabachi manga. Chihiro Rokuhira, Shiba, Char Kyonagi, and more — full profiles and backstories for every major character."
+        title="Kagurabachi Characters Guide — Chihiro, Hishaku & All Cast"
+        description="Complete Kagurabachi character guide. Chihiro Rokuhira, Shiba, Hakuri Sazanami, Hishaku members, enchanted blade bearers and more — profiles, abilities, and backstories."
         canonicalUrl="https://kagurabachimanga.online/characters"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Kagurabachi Characters Guide — Chihiro, Hishaku & All Cast",
+          "description": "Complete Kagurabachi character guide with profiles, abilities, and backstories for every major character.",
+          "url": "https://kagurabachimanga.online/characters",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Kagurabachi Manga",
+            "url": "https://kagurabachimanga.online/"
+          }
+        }}
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kagurabachimanga.online/" },
+              { "@type": "ListItem", "position": 2, "name": "Characters", "item": "https://kagurabachimanga.online/characters" }
+            ]
+          }
+        ]}
       />
 
       <div className="text-center mb-16">

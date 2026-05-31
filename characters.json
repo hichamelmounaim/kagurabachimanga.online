@@ -1,0 +1,177 @@
+[
+  {
+    "id": 314801,
+    "name": "Chihiro Rokuhira",
+    "role": "MAIN",
+    "description": "__Height:__ 170-175 cm\n\nSon and apprentice of the master swordsmith [Kunishige Rokuhira](https://anilist.co/character/314803).\n\nWielder of the Enchanted Blade Enten, and a user of the Iai White Purity Style.\n\n~!He possesses the \"Rokuhira Eyes\" which are able to see through extremely fast \"invisible swordsmanship\" and the eyes allow him to learn sword techniques by just seeing them once.!~",
+    "imagePath": "/characters/314801.jpg"
+  },
+  {
+    "id": 326181,
+    "name": "Hakuri Sazanami",
+    "role": "MAIN",
+    "description": "Hakuri is a young man that was disowned from the Sazanami clan due to being perceived as weak. He witnessed [Chihiro](https://anilist.co/character/314801) and [Sojo](https://anilist.co/character/317244)'s battle in the streets of Tokyo from a nearby restaurant and was touched by the sight of Chihiro's bravery, regarding him as a samurai. \n\n~!He possesses the extremely rare distinction of having 2 sorceries, Shockwave Manipulation and The Storehouse.!~",
+    "imagePath": "/characters/326181.jpg"
+  },
+  {
+    "id": 314802,
+    "name": "Togo Shiba",
+    "role": "SUPPORTING",
+    "description": "Old friend of [Kunishige Rokuhira](https://anilist.co/character/314803), a former member of the Kamunabi, and a Seitei War veteran.",
+    "imagePath": "/characters/314802.jpg"
+  },
+  {
+    "id": 314803,
+    "name": "Kunishige Rokuhira",
+    "role": "SUPPORTING",
+    "description": "Master swordsmith who forges katana with a special technique known to no one else. Father of [Chihiro](https://anilist.co/character/314801).",
+    "imagePath": "/characters/314803.jpg"
+  },
+  {
+    "id": 315655,
+    "name": "Hinao",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/315655.jpg"
+  },
+  {
+    "id": 316062,
+    "name": "Char Kyounagi",
+    "role": "SUPPORTING",
+    "description": "She is a young orphan girl living on the streets who has reportedly witnessed an enchanted blade.",
+    "imagePath": "/characters/316062.jpg"
+  },
+  {
+    "id": 317244,
+    "name": "Genichi Soujou",
+    "role": "SUPPORTING",
+    "description": "He is a prominent weapons dealer who controls Japan. A big fish of the underworld.\n\n~!He is the leader of the group pursuing Char, which includes the one that has already been captured by Chihiro and Shiba. He is also the current owner of one of the enchanted blades, the Cloud Gouger, crafted by Kunishige.!~",
+    "imagePath": "/characters/317244.jpg"
+  },
+  {
+    "id": 318348,
+    "name": "Soushirou Azami",
+    "role": "SUPPORTING",
+    "description": "A member of the Kamunabi.",
+    "imagePath": "/characters/318348.jpg"
+  },
+  {
+    "id": 318366,
+    "name": "Norisaku Madoka",
+    "role": "SUPPORTING",
+    "description": "Appears to be in pursuit of Char, and has the ability to produce daruma dolls that can violently explode at the command 'Invincible.'",
+    "imagePath": "/characters/318366.jpg"
+  },
+  {
+    "id": 318368,
+    "name": "Hishaku Youjutsu-shi",
+    "role": "SUPPORTING",
+    "description": "The unnamed sorcerer, described as a man wearing a cap, possessed a distinctive tattoo that may indicate his affiliation with the sorcerer group known as Hishaku, which Chihiro is searching for.",
+    "imagePath": "/characters/318368.jpg"
+  },
+  {
+    "id": 320441,
+    "name": "Kiyohiko Uzuki",
+    "role": "SUPPORTING",
+    "description": "A member of the Anti-Cloud Gouger Special Forces, serving under Ikuto.",
+    "imagePath": "/characters/320441.jpg"
+  },
+  {
+    "id": 320442,
+    "name": "Shiyumi Harima",
+    "role": "SUPPORTING",
+    "description": "A member of the Anti-Cloud Gouger Special Forces, serving under Ikuto.",
+    "imagePath": "/characters/320442.jpg"
+  },
+  {
+    "id": 320444,
+    "name": "Makoto Kasahara",
+    "role": "SUPPORTING",
+    "description": "A member of the Anti-Cloud Gouger Special Forces, serving under Ikuto.",
+    "imagePath": "/characters/320444.jpg"
+  },
+  {
+    "id": 320445,
+    "name": "Ikuto Hagiwara",
+    "role": "SUPPORTING",
+    "description": "Ikuto Hagiwara is one of the Kamunabi elite members. He uses magnetic powers to repel and attract. He leads the Anti-Cloud Gouger Special Forces, a group comprising of six individuals, including himself, which are collectively recognized as 'elite' by Sojo.",
+    "imagePath": "/characters/320445.jpg"
+  },
+  {
+    "id": 320446,
+    "name": "Hajime Kugara",
+    "role": "SUPPORTING",
+    "description": "A member of the Anti-Cloud Gouger Special Forces, serving under Ikuto.",
+    "imagePath": "/characters/320446.jpg"
+  },
+  {
+    "id": 320869,
+    "name": "Kazane Machi",
+    "role": "SUPPORTING",
+    "description": "A member of the Anti-Cloud Gouger Special Forces, serving under Ikuto.",
+    "imagePath": "/characters/320869.jpg"
+  },
+  {
+    "id": 325470,
+    "name": "Hiyuki Kagari",
+    "role": "SUPPORTING",
+    "description": "She is stated to be the 'strongest fighter of the Kamunabi', 'the only individual capable of opposing an Enchanted Blade' and wields the Flame Bone of the Starving, which is said to hold strength on par with the Enchanted Blades.",
+    "imagePath": "/characters/325470.jpg"
+  },
+  {
+    "id": 325803,
+    "name": "Kudou",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/325803.jpg"
+  },
+  {
+    "id": 325804,
+    "name": "Kamunabi Erai Hito D",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/325804.jpg"
+  },
+  {
+    "id": 325805,
+    "name": "Kamunabi Erai Hito C",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/325805.jpg"
+  },
+  {
+    "id": 325806,
+    "name": "Kasen",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/325806.jpg"
+  },
+  {
+    "id": 325807,
+    "name": "Izaru",
+    "role": "SUPPORTING",
+    "description": "Izaru is one of the leaders of the Kamunabi.",
+    "imagePath": "/characters/325807.jpg"
+  },
+  {
+    "id": 325808,
+    "name": "Yatsuru",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/325808.jpg"
+  },
+  {
+    "id": 325809,
+    "name": "Kamunabi Erai Hito A",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/325809.jpg"
+  },
+  {
+    "id": 325810,
+    "name": "Ichiki",
+    "role": "SUPPORTING",
+    "description": null,
+    "imagePath": "/characters/325810.jpg"
+  }
+]

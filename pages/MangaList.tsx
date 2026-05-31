@@ -22,14 +22,14 @@ const MangaList: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-[#0a0a0a]">
       <SEOHead
-        title="Read Kagurabachi Manga Online Free - All Chapters List"
-        description="Read Kagurabachi manga online free — complete chapter list from Vol 1 to the latest. HD scans, no sign-up needed. Browse all Kagurabachi manga chapters."
+        title="Kagurabachi Chapter List — All Chapters Online Free | Read Kagurabachi"
+        description={`Complete Kagurabachi chapter list — all ${filteredChapters.length}+ chapters from Vol 1 to the latest, free online. HD scans, no sign-up needed. Updated weekly.`}
         canonicalUrl="https://kagurabachimanga.online/manga"
         schema={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Kagurabachi Manga - All Chapters | Read Online Free",
-          "description": "Read Kagurabachi manga online free — complete chapter list from Vol 1 to the latest. HD scans, no sign-up needed.",
+          "name": "Kagurabachi Manga — All Chapters | Read Online Free",
+          "description": "Complete Kagurabachi chapter list — all chapters from Vol 1 to the latest, free online. HD scans, no sign-up needed.",
           "url": "https://kagurabachimanga.online/manga",
           "isPartOf": {
             "@type": "WebSite",
@@ -37,6 +37,16 @@ const MangaList: React.FC = () => {
             "url": "https://kagurabachimanga.online/"
           }
         }}
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kagurabachimanga.online/" },
+              { "@type": "ListItem", "position": 2, "name": "Chapter List", "item": "https://kagurabachimanga.online/manga" }
+            ]
+          }
+        ]}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

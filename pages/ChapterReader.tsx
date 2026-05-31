@@ -77,30 +77,53 @@ const ChapterReader: React.FC = () => {
   return (
     <div className="bg-gray-100 dark:bg-[#121212] min-h-screen flex flex-col">
       <SEOHead
-        title={`Kagurabachi Manga Chapter ${chapter.number} - Read Online`}
-        description={`Read Kagurabachi Manga Chapter ${chapter.number}: ${chapter.title} online in high quality free. Official English scans available.`}
+        title={`Kagurabachi Chapter ${chapter.number} – ${chapter.title} | Read Online Free`}
+        description={`Read Kagurabachi Chapter ${chapter.number} – ${chapter.title} for free in English. HD scans, no sign-up required. Read previous and next chapters at kagurabachimanga.online.`}
         canonicalUrl={`https://kagurabachimanga.online/chapter/${chapter.number}`}
+        ogType="article"
         ogImage={chapter.pages[0] || 'https://kagurabachimanga.online/kagurabachi-manga-logo.png'}
         schema={{
           "@context": "https://schema.org",
-          "@type": "ComicIssue",
+          "@type": "Article",
           "headline": `Kagurabachi Chapter ${chapter.number}: ${chapter.title}`,
-          "image": chapter.pages[0],
+          "image": chapter.pages[0] || 'https://kagurabachimanga.online/kagurabachi-manga-logo.png',
           "datePublished": chapter.releaseDate,
-          "issueNumber": chapter.number,
-          "isPartOf": {
-            "@type": "ComicSeries",
-            "name": "Kagurabachi"
-          },
           "author": {
             "@type": "Person",
-            "name": "Hokazono Takeru"
+            "name": "Takeru Hokazono"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Kagurabachi Manga"
-          }
+            "name": "Kagurabachi Manga",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://kagurabachimanga.online/kagurabachi-manga-logo.png"
+            }
+          },
+          "isPartOf": {
+            "@type": "Book",
+            "name": "Kagurabachi",
+            "author": { "@type": "Person", "name": "Takeru Hokazono" }
+          },
+          "url": `https://kagurabachimanga.online/chapter/${chapter.number}`
         }}
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kagurabachimanga.online/" },
+              { "@type": "ListItem", "position": 2, "name": "Kagurabachi Manga", "item": "https://kagurabachimanga.online/manga" },
+              { "@type": "ListItem", "position": 3, "name": `Chapter ${chapter.number}`, "item": `https://kagurabachimanga.online/chapter/${chapter.number}` }
+            ]
+          },
+          ...(prevChapter ? [{
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "url": `https://kagurabachimanga.online/chapter/${chapter.number}`,
+            "relatedLink": `https://kagurabachimanga.online/chapter/${prevChapter.number}`
+          }] : [])
+        ]}
       />
 
 
@@ -158,7 +181,6 @@ const ChapterReader: React.FC = () => {
 
       {/* Reader Content */}
       <div className={`flex-1 pt-16 ${readingMode === 'horizontal' ? 'h-[calc(100vh-64px)] overflow-hidden' : ''}`}>
-        <h1 className="sr-only">Read Kagurabachi Chapter {chapter.number}: {chapter.title}</h1>
         {readingMode === 'vertical' && chapter.pages.length > 0 && (
           <div className="max-w-4xl mx-auto px-4 py-4">
             <Breadcrumbs items={[
@@ -166,6 +188,26 @@ const ChapterReader: React.FC = () => {
               { label: 'Kagurabachi', path: '/manga' },
               { label: `Chapter ${chapter.number}`, path: `/chapter/${chapter.number}` }
             ]} />
+            <h1 className="text-2xl font-heading font-bold text-gray-900 dark:text-white mt-4 mb-2">
+              Kagurabachi Chapter {chapter.number} – {chapter.title}
+            </h1>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+              Published: {new Date(chapter.releaseDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              {' · '}
+              <span>{chapter.pages.length} pages</span>
+            </p>
+            <div className="flex gap-4 text-sm mb-4">
+              {prevChapter && (
+                <Link to={`/chapter/${prevChapter.number}`} className="text-bb-blue hover:underline">
+                  ← Chapter {prevChapter.number}
+                </Link>
+              )}
+              {nextChapter && (
+                <Link to={`/chapter/${nextChapter.number}`} className="text-bb-blue hover:underline">
+                  Chapter {nextChapter.number} →
+                </Link>
+              )}
+            </div>
           </div>
         )}
         {chapter.pages.length === 0 ? (

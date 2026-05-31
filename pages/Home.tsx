@@ -1,42 +1,125 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Star, MessageCircle, Bookmark } from 'lucide-react';
+import { ArrowRight, BookOpen, Star, MessageCircle, Bookmark, Users } from 'lucide-react';
+import { CHARACTERS } from '../constants';
 import SEOHead from '../components/SEOHead';
 import { useManga } from '../context/MangaContext';
 
 const Home: React.FC = () => {
   const { chapters } = useManga();
   const latestChapter = chapters[0];
+  const chapterCount = chapters.length;
+
+  const faqItems = [
+    {
+      question: 'How many chapters does Kagurabachi have?',
+      answer: `Kagurabachi currently has ${chapterCount}+ chapters and is ongoing. New chapters release weekly in Weekly Shōnen Jump every Sunday.`,
+    },
+    {
+      question: 'Is there a Kagurabachi anime?',
+      answer: 'As of 2025, no Kagurabachi anime adaptation has been officially announced. Given the manga\'s explosive popularity — it won the Next Manga Award and regularly tops Jump reader polls — an anime announcement is widely anticipated. Stay tuned to this site for updates.',
+    },
+    {
+      question: 'When is the next Kagurabachi chapter released?',
+      answer: 'Kagurabachi releases a new chapter every Sunday in Weekly Shōnen Jump. Occasional breaks may apply. Check our chapter list for the latest release date.',
+    },
+    {
+      question: 'Why Read Kagurabachi Manga on this Site?',
+      answer: 'kagurabachimanga.online offers high-quality scans of every chapter, from Vol 1 to the latest, with no sign-up required. Our reader is optimized for mobile and desktop, with fast loading and clean layout.',
+    },
+    {
+      question: 'Is Kagurabachi Manga Cancelled?',
+      answer: 'No — Kagurabachi manga is not cancelled. It is actively ongoing and serialized weekly in Weekly Shōnen Jump. New chapters continue to release regularly.',
+    },
+    {
+      question: 'Where should I start reading?',
+      answer: 'Start with Chapter 1 (Vol 1) for the full experience. The story builds progressively — reading from the beginning is essential to appreciate the character growth and the enchanted blades lore.',
+    },
+    {
+      question: 'Where to read Kagurabachi officially?',
+      answer: 'The official English release is available on Viz Media and Manga Plus for the latest simulcast chapters. You can read the full archive here on kagurabachimanga.online — all chapters, free online.',
+    },
+    {
+      question: 'What manga is similar to Kagurabachi?',
+      answer: 'If you enjoy Kagurabachi, you\'ll likely love Demon Slayer, Jujutsu Kaisen, and Blue Exorcist — all feature a protagonist-driven revenge arc, supernatural swordplay, and dark fantasy themes similar to Kagurabachi\'s unique style.',
+    },
+  ];
 
   return (
     <>
       <SEOHead
-        title="Kagurabachi Manga - Read Online Free, All Chapters"
-        description="Read Kagurabachi Manga online free in high quality. All chapters from Vol 1 to the latest — no sign-up required. The #1 site to read Kagurabachi manga online."
+        title="Read Kagurabachi Manga Online Free in English | All Chapters"
+        description={`Read Kagurabachi manga online for free in English. All ${chapterCount}+ chapters available. Chihiro's revenge story — the viral Shonen Jump hit by Takeru Hokazono.`}
         canonicalUrl="https://kagurabachimanga.online/"
         schema={{
           "@context": "https://schema.org",
-          "@type": "ComicSeries",
+          "@type": "Book",
           "name": "Kagurabachi",
-          "description": "As a young boy, Chihiro trains every day under his father to become a swordsmith. But one day, tragedy strikes. Now Chihiro burns with hatred and sets out to exact revenge against the Hishaku, a deadly group of sorcerers.",
-          "url": "https://kagurabachimanga.online/",
+          "alternateName": ["カグラバチ", "Kagura Bachi"],
           "author": {
             "@type": "Person",
-            "name": "Hokazono Takeru"
+            "name": "Takeru Hokazono"
           },
-          "genre": ["Action", "Comedy", "Crime", "Mystery", "Tragedy"],
-          "numberOfIssues": 125,
-          "datePublished": "2023",
-          "inLanguage": "en",
           "publisher": {
             "@type": "Organization",
-            "name": "Kagurabachi Manga"
-          }
+            "name": "Shueisha"
+          },
+          "genre": ["Action", "Dark Fantasy", "Shounen", "Supernatural", "Revenge"],
+          "datePublished": "2023-09-19",
+          "inLanguage": "ja",
+          "numberOfPages": chapterCount,
+          "description": "Chihiro Rokuhira seeks revenge against the Hishaku sorcerers who killed his father and stole the Enchanted Blades.",
+          "award": "10th Next Manga Award — Print Category",
+          "url": "https://kagurabachimanga.online/"
         }}
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map(item => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer,
+              },
+            })),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Kagurabachi Manga",
+            "url": "https://kagurabachimanga.online/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://kagurabachimanga.online/manga?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Kagurabachi Characters",
+            "description": "Main characters and antagonists in the Kagurabachi manga.",
+            "itemListElement": CHARACTERS.map((char, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Person",
+                "name": char.name,
+                "description": char.description,
+                "image": `https://kagurabachimanga.online${char.image}`
+              }
+            }))
+          }
+        ]}
       />
 
       {/* Hero Section */}
-      <section 
+      <section
         className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-bb-dark py-20 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url("/kagurabachi-manga-cover.webp")' }}
       >
@@ -44,18 +127,16 @@ const Home: React.FC = () => {
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
 
-
-
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-heading font-black text-center uppercase tracking-tighter mb-4 drop-shadow-2xl leading-none">
             <span className="text-white">KAGURABACHI</span> <span className="text-bb-blue">MANGA</span>
           </h1>
 
           <p className="text-gray-200 text-lg md:text-xl max-w-4xl text-center mb-10 font-medium leading-relaxed drop-shadow-md">
-            Read Kagurabachi Manga Online In High Quality, All Chapters and Volumes in<br className="hidden sm:block" />
-            English With HD scans and No Sign-Up Required.
+            Read Kagurabachi Manga Online Free in English — All {chapterCount}+ Chapters in HD.<br className="hidden sm:block" />
+            No Sign-Up Required.
           </p>
 
-          {/* Info Card - Dark by default, Light/Dark supported if needed, but keeping Dark for Hero */}
+          {/* Info Card */}
           <div className="w-full bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 mb-10 shadow-2xl">
             <div className="flex flex-col lg:flex-row gap-8">
 
@@ -79,25 +160,29 @@ const Home: React.FC = () => {
                 </div>
                 <div className="space-y-1">
                   <span className="text-gray-500 text-xs font-bold uppercase tracking-wider block">Release</span>
-                  <span className="text-white font-medium">2023</span>
+                  <span className="text-white font-medium">Sep 19, 2023</span>
                 </div>
                 <div className="space-y-1">
                   <span className="text-gray-500 text-xs font-bold uppercase tracking-wider block">Status</span>
                   <span className="text-green-400 font-bold">Ongoing</span>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-gray-500 text-xs font-bold uppercase tracking-wider block">Type</span>
-                  <span className="text-white font-medium">Action, Fantasy, Dark Fantasy</span>
+                  <span className="text-gray-500 text-xs font-bold uppercase tracking-wider block">Chapters</span>
+                  <span className="text-white font-medium">{chapterCount}+</span>
                 </div>
 
                 <div className="col-span-2 sm:col-span-4 flex flex-col gap-3 mt-2">
                   <div className="flex flex-wrap gap-2 items-center border-t border-white/5 pt-3">
-                    <span className="text-gray-500 text-xs font-bold uppercase tracking-wider mr-2">Author(s):</span>
-                    <span className="text-white hover:text-bb-blue cursor-pointer transition-colors">Takeru Hokazono</span>
+                    <span className="text-gray-500 text-xs font-bold uppercase tracking-wider mr-2">Author:</span>
+                    <span className="text-white">Takeru Hokazono</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2 items-center border-t border-white/5 pt-3">
+                    <span className="text-gray-500 text-xs font-bold uppercase tracking-wider mr-2">Publisher:</span>
+                    <span className="text-white">Shueisha / Weekly Shōnen Jump</span>
                   </div>
                   <div className="flex flex-wrap gap-2 items-center border-t border-white/5 pt-3">
                     <span className="text-gray-500 text-xs font-bold uppercase tracking-wider mr-2">Genre(s):</span>
-                    {["Action","Fantasy","Dark Fantasy","Shonen","Drama"].map(g => (
+                    {["Action", "Dark Fantasy", "Shounen", "Supernatural", "Revenge"].map(g => (
                       <span key={g} className="text-xs text-gray-400 hover:text-white transition-colors cursor-pointer">
                         {g},
                       </span>
@@ -106,13 +191,13 @@ const Home: React.FC = () => {
                   <div className="flex flex-col gap-2 items-start border-t border-white/5 pt-3">
                     <span className="text-gray-500 text-xs font-bold uppercase tracking-wider">Synopsis:</span>
                     <p className="text-sm text-gray-300 leading-relaxed">
-                      Chihiro Rokuhira, a young boy seeking vengeance for his father's death, uses one of the six enchanted blades crafted by his father to fight a group of rogue sorcerers.
+                      Chihiro Rokuhira, a young boy seeking vengeance for his father's death, wields one of six enchanted blades to hunt the Hishaku — a dangerous group of rogue sorcerers who slaughtered his father and stole his life's work.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Right Column: Actions/Social Proof */}
+              {/* Right Column: Social Proof */}
               <div className="flex lg:flex-col justify-center items-center gap-8 min-w-[140px]">
                 <div className="text-center group w-full">
                   <MessageCircle className="w-8 h-8 text-gray-500 group-hover:text-bb-blue mx-auto mb-2 transition-colors" />
@@ -138,23 +223,21 @@ const Home: React.FC = () => {
           {latestChapter && (
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
               <Link
-                to={`/chapter/${latestChapter.number}`}
+                to="/chapter/1"
                 className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-bb-blue hover:bg-blue-700 shadow-lg shadow-blue-900/20 transition-all hover:scale-105"
               >
-                Read Chapter {latestChapter.number}
+                Start Reading — Chapter 1
               </Link>
-              <a
-                href="https://www.infinitymanga.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={`/chapter/${latestChapter.number}`}
                 className="inline-flex items-center justify-center px-8 py-4 border border-white/20 bg-white/5 backdrop-blur-sm text-lg font-bold rounded-lg text-white hover:bg-white hover:text-black transition-all"
               >
-                Explore More Manga
-              </a>
+                Latest: Chapter {latestChapter.number}
+              </Link>
             </div>
           )}
         </div>
-      </section >
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
@@ -193,33 +276,90 @@ const Home: React.FC = () => {
           </div>
         </section>
 
+        {/* Characters Section */}
+        <section className="mb-16">
+          <div className="flex items-center gap-2 mb-8">
+            <Users className="text-bb-blue" />
+            <h2 className="text-3xl font-heading font-bold text-gray-900 dark:text-white">Main Characters</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {CHARACTERS.map((char) => (
+              <div key={char.id} className="bg-white dark:bg-[#1a1a1a] rounded-xl overflow-hidden border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-all group">
+                <div className="aspect-[3/4] relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img 
+                    src={char.image} 
+                    alt={`${char.name} - Kagurabachi Character`} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+                  <div className="absolute bottom-0 left-0 p-4 w-full">
+                    <span className="inline-block px-2 py-1 bg-bb-blue/90 text-white text-[10px] font-bold uppercase tracking-wider rounded mb-2">
+                      {char.role}
+                    </span>
+                    <h3 className="text-xl font-bold text-white leading-tight mb-1">{char.name}</h3>
+                    <p className="text-gray-300 text-xs font-medium uppercase tracking-wide">{char.grade}</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-4 leading-relaxed">
+                    {char.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* About / Manga Overview */}
         <section className="mb-16">
           <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl p-8 border border-gray-200 dark:border-white/10 shadow-sm">
             <h2 className="text-3xl font-heading font-bold text-gray-900 dark:text-white mb-6">About Kagurabachi</h2>
             <div className="prose prose-lg dark:prose-invert text-gray-700 dark:text-gray-300 max-w-none space-y-4">
               <p>
-                <strong className="text-gray-900 dark:text-white">Kagurabachi</strong> is an acclaimed manga series written/illustrated by <strong className="text-gray-900 dark:text-white">Takeru Hokazono</strong>. It has been serialized in <strong className="text-gray-900 dark:text-white">Weekly Shōnen Jump</strong> since 2023. The story follows <strong className="text-gray-900 dark:text-white">Chihiro Rokuhira</strong> and other key figures in an epic journey.
+                <strong className="text-gray-900 dark:text-white">Kagurabachi</strong> (カグラバチ) is a dark-fantasy action manga written and illustrated by <strong className="text-gray-900 dark:text-white">Takeru Hokazono</strong>. It has been serialized in <strong className="text-gray-900 dark:text-white">Weekly Shōnen Jump</strong> since September 19, 2023, published by <strong className="text-gray-900 dark:text-white">Shueisha</strong>. The series has been collected into tankobon volumes and won the <strong className="text-gray-900 dark:text-white">10th Next Manga Award in the Print Category</strong> — making it one of the fastest breakout hits in Jump history.
               </p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">Synopsis</h3>
               <p>
-                Chihiro Rokuhira, a young boy seeking vengeance for his father's death, uses one of the six enchanted blades crafted by his father to fight a group of rogue sorcerers.
+                <strong className="text-gray-900 dark:text-white">Chihiro Rokuhira</strong> grew up watching his father, the legendary swordsmith Kunihiko Rokuhira, forge six extraordinary <strong className="text-gray-900 dark:text-white">Enchanted Blades</strong> — weapons imbued with sorcery powerful enough to reshape the world. One day, a ruthless group of sorcerers known as <strong className="text-gray-900 dark:text-white">the Hishaku</strong> slaughtered Kunihiko, stole the six blades, and left Chihiro with nothing but grief and a single blade his father hid away: <strong className="text-gray-900 dark:text-white">Enten</strong>.
+              </p>
+              <p>
+                Armed with Enten and the swordsmanship his father drilled into him over years of brutal training, Chihiro sets out on a singular mission: <em>kill every member of the Hishaku and reclaim the stolen Enchanted Blades</em>. What follows is an intense, visceral journey through a world where sorcery and swordsmanship collide, and where the line between justice and vengeance blurs with every swing.
               </p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">Key Characters</h3>
               <p>
-                The series features memorable characters including <strong className="text-gray-900 dark:text-white">Chihiro Rokuhira</strong>, <strong className="text-gray-900 dark:text-white">Shiba</strong>, and <strong className="text-gray-900 dark:text-white">Char Kyonagi</strong>.
+                The series features a compelling cast including <strong className="text-gray-900 dark:text-white">Chihiro Rokuhira</strong> (the taciturn, revenge-driven protagonist), <strong className="text-gray-900 dark:text-white">Shiba</strong> (his pragmatic, morally flexible partner), <strong className="text-gray-900 dark:text-white">Hakuri Sazanami</strong> (a young sorcerer-in-training), and the various members of the <strong className="text-gray-900 dark:text-white">Hishaku</strong> — each one a formidable villain with their own philosophy and Enchanted Blade.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">The Enchanted Blades</h3>
+              <p>
+                The six <strong className="text-gray-900 dark:text-white">Enchanted Blades</strong> forged by Kunihiko are central to the plot. Each blade has a unique sorcery ability and is currently in the hands of different Hishaku members or their associates. Chihiro's blade, <strong className="text-gray-900 dark:text-white">Enten</strong>, grants him explosive, devastating power that makes him one of the most formidable fighters in the series. Other notable blades include <strong className="text-gray-900 dark:text-white">Cloud Gouger</strong>, which controls and compresses air into lethal attacks.
               </p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">Why Read Kagurabachi?</h3>
               <p>
-                <strong className="text-gray-900 dark:text-white">Kagurabachi</strong> offers an incredible and unique storyline with high-stakes drama and exceptional artwork. The story builds progressively, keeping readers on the edge of their seats with every chapter.
+                Kagurabachi stands apart from other shonen manga through its relentlessly grim tone and a protagonist who is not here to make friends — Chihiro is cold, efficient, and laser-focused on his goal. The swordplay choreography is exceptionally dynamic, with Hokazono's art delivering explosive action sequences that feel kinetic on the page. The manga also weaves in a rich lore around sorcery, clans, and political intrigue that rewards attentive readers.
               </p>
+              <p>
+                Beyond the action, Kagurabachi explores themes of grief, legacy, and the cost of obsessive vengeance — giving it genuine emotional weight beneath the intense fight scenes. It became a viral phenomenon online shortly after launch, with fans dubbing it the "next big thing" in Jump, and the reader poll numbers back that up.
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">Series Information</h3>
+              <ul className="list-none space-y-2 text-sm">
+                <li><strong className="text-gray-900 dark:text-white">Author/Artist:</strong> Takeru Hokazono</li>
+                <li><strong className="text-gray-900 dark:text-white">Publisher:</strong> Shueisha (Weekly Shōnen Jump)</li>
+                <li><strong className="text-gray-900 dark:text-white">Serialization Start:</strong> September 19, 2023</li>
+                <li><strong className="text-gray-900 dark:text-white">Status:</strong> Ongoing — new chapters weekly</li>
+                <li><strong className="text-gray-900 dark:text-white">Genres:</strong> Action, Dark Fantasy, Shounen, Supernatural, Revenge</li>
+                <li><strong className="text-gray-900 dark:text-white">Award:</strong> 10th Next Manga Award — Print Category</li>
+                <li><strong className="text-gray-900 dark:text-white">English Publisher:</strong> Viz Media / Manga Plus</li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* Major Story Arcs */}
         {/* FAQ Section */}
         <section className="mb-16">
           <div className="flex items-center gap-2 mb-8">
@@ -228,67 +368,36 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Why Read Kagurabachi Manga on this Site?</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Experience <strong>Kagurabachi manga</strong> like never before with high-quality scans and regularly updated chapters. Dive into the intense storyline without delays.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Differences between Kagurabachi Manga and Anime?</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                The <strong>Kagurabachi manga</strong> offers intense and detailed art that the anime sometimes simplifies. The aura and ego effects are more visceral in the manga.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Is Kagurabachi Manga Cancelled?</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                No — <strong>Kagurabachi manga is not cancelled</strong>. It is actively ongoing and serialized weekly in Weekly Shōnen Jump. New chapters continue to release regularly.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Where should I start reading?</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Start with <Link to="/chapter/1" className="text-bb-blue hover:underline">Chapter 1 (Vol 1)</Link> for the full experience. The story builds progressively — reading from the beginning is essential to appreciate the character growth and the enchanted blades lore.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">Where to read Kagurabachi officially?</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                The official English release is available on <strong>Viz Media</strong> and <strong>Manga Plus</strong> for the latest simulcast chapters. You can read the full archive here on <strong>kagurabachimanga.online</strong> — all chapters, free online.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">What manga is similar to Kagurabachi?</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                If you enjoy <strong>Kagurabachi</strong>, you'll likely love <em>Demon Slayer</em>, <em>Jujutsu Kaisen</em>, and <em>Blue Exorcist</em> — all feature a protagonist-driven revenge arc, supernatural swordplay, and dark fantasy themes similar to Kagurabachi's unique style.
-              </p>
-            </div>
+            {faqItems.map((faq) => (
+              <div key={faq.question} className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{faq.question}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  {faq.question === 'Where should I start reading?' ? (
+                    <>Start with <Link to="/chapter/1" className="text-bb-blue hover:underline">Chapter 1 (Vol 1)</Link> for the full experience. The story builds progressively — reading from the beginning is essential to appreciate the character growth and the enchanted blades lore.</>
+                  ) : faq.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Improved SEO Content Section */}
+        {/* SEO Content Section */}
         <section className="mb-12">
           <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl p-8 border border-gray-200 dark:border-white/10 shadow-sm">
             <h2 className="text-3xl font-heading font-bold text-gray-900 dark:text-white mb-6">Read Kagurabachi Manga Online Free</h2>
             <div className="prose prose-lg dark:prose-invert text-gray-700 dark:text-gray-300 max-w-none space-y-4">
               <p>
-                Welcome to <strong>kagurabachimanga.online</strong> — the best place to <strong className="text-bb-blue">read Kagurabachi manga online free</strong>. We host high-quality scans of every chapter, from <strong>Kagurabachi manga Vol 1</strong> all the way to the latest release, updated as soon as new chapters drop. No ads blocking your panels, no sign-up required.
+                Welcome to <strong>kagurabachimanga.online</strong> — the best place to <strong className="text-bb-blue">read Kagurabachi manga online free</strong>. We host high-quality scans of every chapter, from <strong>Kagurabachi manga Vol 1</strong> all the way to the latest release, updated as soon as new chapters drop. No sign-up required.
               </p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">What is Kagurabachi?</h3>
               <p>
-                <strong>Kagurabachi</strong> is a dark-fantasy action manga by <strong>Takeru Hokazono</strong>, serialized in Weekly Shōnen Jump since 2023. The story follows Chihiro Rokuhira, who wields one of six enchanted blades forged by his father to hunt down the rogue sorcerer group Hishaku. Its iconic <strong>manga panels</strong> — fluid swordplay mixed with sorcery — have made it one of the fastest-rising series in Jump history.
+                <strong>Kagurabachi</strong> is a dark-fantasy action manga by <strong>Takeru Hokazono</strong>, serialized in Weekly Shōnen Jump since September 2023. The story follows Chihiro Rokuhira, who wields one of six enchanted blades forged by his father to hunt down the rogue sorcerer group Hishaku. Its iconic swordplay panels mixed with sorcery have made it one of the fastest-rising series in Jump history, winning the <strong>Next Manga Award</strong> and earning a dedicated global fanbase.
               </p>
 
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Why Read Kagurabachi Manga Here?</h3>
               <p>
-                Unlike <strong>Viz</strong> or <strong>Manga Plus</strong> which limit the archive, <strong>kagurabachimanga.online</strong> lets you <strong>read Kagurabachi manga online</strong> — all chapters, completely free. Our reader is optimized for mobile and desktop, loads every <strong>manga panel</strong> in HD, and works without an account. Whether you're catching up from <strong>Vol 1</strong> or following the weekly drops, this is the fastest, cleanest reading experience available.
+                Unlike <strong>Viz</strong> or <strong>Manga Plus</strong> which limit the archive, <strong>kagurabachimanga.online</strong> lets you <strong>read Kagurabachi manga online</strong> — all {chapterCount}+ chapters, completely free. Our reader is optimized for mobile and desktop, loads every manga panel in HD, and works without an account. Whether you're catching up from <strong>Vol 1</strong> or following the weekly drops, this is the fastest, cleanest reading experience available. Also searchable as <em>kagura bachi</em> or <em>kagurabachi english</em>.
               </p>
             </div>
           </div>

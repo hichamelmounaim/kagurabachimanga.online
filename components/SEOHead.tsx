@@ -5,12 +5,13 @@ interface SEOHeadProps extends SEOMeta {
   canonicalUrl?: string;
   ogType?: string;
   ogImage?: string;
+  schemas?: object[];
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, canonicalUrl, ogType = 'website', ogImage = 'https://kagurabachimanga.online/kagurabachi-manga-logo.png' }) => {
+const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, schemas, canonicalUrl, ogType = 'website', ogImage = 'https://kagurabachimanga.online/kagurabachi-manga-logo.png' }) => {
   useEffect(() => {
     // Update Title
-    document.title = `${title} | Kagurabachi Manga`;
+    document.title = title;
 
     // Update Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -69,7 +70,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, canonical
       linkCanonical.setAttribute('href', canonicalUrl);
     }
 
-    // Add Schema.org JSON-LD
+    // Add Schema.org JSON-LD (primary schema)
     if (schema) {
       let scriptSchema = document.querySelector('#structured-data');
       if (!scriptSchema) {
@@ -81,7 +82,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, schema, canonical
       scriptSchema.textContent = JSON.stringify(schema);
     }
 
-  }, [title, description, schema, canonicalUrl, ogType, ogImage]);
+    // Add additional schemas (e.g. FAQPage, BreadcrumbList)
+    if (schemas && schemas.length > 0) {
+      document.querySelectorAll('.structured-data-extra').forEach(el => el.remove());
+      schemas.forEach((s, i) => {
+        const el = document.createElement('script');
+        el.className = 'structured-data-extra';
+        el.setAttribute('type', 'application/ld+json');
+        el.id = `structured-data-${i}`;
+        el.textContent = JSON.stringify(s);
+        document.head.appendChild(el);
+      });
+    }
+
+  }, [title, description, schema, schemas, canonicalUrl, ogType, ogImage]);
 
   return null;
 };
