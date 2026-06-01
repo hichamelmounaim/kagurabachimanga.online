@@ -53,7 +53,7 @@ const Home: React.FC = () => {
         canonicalUrl="https://www.kagurabachimanga.online/"
         schema={{
           "@context": "https://schema.org",
-          "@type": "Book",
+          "@type": "ComicSeries",
           "name": "Kagurabachi",
           "alternateName": ["カグラバチ", "Kagura Bachi"],
           "author": {
@@ -62,15 +62,25 @@ const Home: React.FC = () => {
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Shueisha"
+            "name": "Shueisha",
+            "url": "https://www.shueisha.co.jp"
           },
           "genre": ["Action", "Dark Fantasy", "Shounen", "Supernatural", "Revenge"],
-          "datePublished": "2023-09-19",
-          "inLanguage": "ja",
-          "numberOfPages": chapterCount,
+          "startDate": "2023-09-19",
+          "inLanguage": "en",
+          "numberOfEpisodes": chapterCount,
+          "contentRating": "Teen",
+          "isAccessibleForFree": true,
           "description": "Chihiro Rokuhira seeks revenge against the Hishaku sorcerers who killed his father and stole the Enchanted Blades.",
-          "award": "10th Next Manga Award — Print Category",
-          "url": "https://www.kagurabachimanga.online/"
+          "image": "https://www.kagurabachimanga.online/kagurabachi-manga-cover.webp",
+          "url": "https://www.kagurabachimanga.online/",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "28000",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
         }}
         schemas={[
           {

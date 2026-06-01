@@ -1,0 +1,32 @@
+# Kagurabachi Manga — kagurabachimanga.online
+
+## About
+Kagurabachi Manga is a fan reading platform dedicated to the manga series "Kagurabachi" (カグラバチ) by Takeru Hokazono. The site provides free access to high-quality English scans of all available chapters.
+
+## Manga Info
+- Title: Kagurabachi
+- Author: Takeru Hokazono
+- Publisher: Shueisha (Weekly Shōnen Jump)
+- Serialization Start: September 19, 2023
+- Status: Ongoing
+- Genre: Action, Dark Fantasy, Shounen, Supernatural, Revenge
+- Award: 10th Next Manga Award — Print Category
+- Synopsis: Chihiro Rokuhira, son of the legendary swordsmith Kunishige Rokuhira, embarks on a revenge quest against the Hishaku sorcerers who murdered his father and stole his enchanted blades.
+
+## Key Characters
+- Chihiro Rokuhira — protagonist, wielder of the Enchanted Blade Enten
+- Hakuri Sazanami — ally and fellow swordsman
+- Char Shinuchi — antagonist, leader of the Hishaku
+
+## Site Pages
+- Homepage: https://www.kagurabachimanga.online/
+- All Chapters: https://www.kagurabachimanga.online/manga
+- Chapter Reader: https://www.kagurabachimanga.online/chapter/{number}
+- Characters: https://www.kagurabachimanga.online/characters
+- About: https://www.kagurabachimanga.online/about
+
+## Contact
+Email: support@kagurabachimanga.online
+
+## Disclaimer
+This is a fan project. Not affiliated with Takeru Hokazono, Shueisha, or Weekly Shōnen Jump. All manga content belongs to their respective copyright owners.
