@@ -9,6 +9,12 @@ const Home: React.FC = () => {
   const { chapters } = useManga();
   const latestChapter = chapters[0];
   const chapterCount = chapters.length;
+  const [continueChapter, setContinueChapter] = React.useState<number | null>(null);
+
+  React.useEffect(() => {
+    const saved = localStorage.getItem('kagurabachi_last_chapter');
+    if (saved) setContinueChapter(parseInt(saved, 10));
+  }, []);
 
   const faqItems = [
     {
@@ -232,12 +238,21 @@ const Home: React.FC = () => {
 
           {latestChapter && (
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-              <Link
-                to="/chapter/1"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-bb-blue hover:bg-blue-700 shadow-lg shadow-blue-900/20 transition-all hover:scale-105"
-              >
-                Start Reading — Chapter 1
-              </Link>
+              {continueChapter ? (
+                <Link
+                  to={`/chapter/${continueChapter}`}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-bb-blue hover:bg-blue-700 shadow-lg shadow-blue-900/20 transition-all hover:scale-105"
+                >
+                  ▶ Continue — Chapter {continueChapter}
+                </Link>
+              ) : (
+                <Link
+                  to="/chapter/1"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-bb-blue hover:bg-blue-700 shadow-lg shadow-blue-900/20 transition-all hover:scale-105"
+                >
+                  Start Reading — Chapter 1
+                </Link>
+              )}
               <Link
                 to={`/chapter/${latestChapter.number}`}
                 className="inline-flex items-center justify-center px-8 py-4 border border-white/20 bg-white/5 backdrop-blur-sm text-lg font-bold rounded-lg text-white hover:bg-white hover:text-black transition-all"
