@@ -38,6 +38,19 @@
         "totalChapters": 125,
         "bulkSync": true
       }
+    },
+    {
+      "id": "7t2yml7",
+      "date": "2026-06-02T08:58:42.748Z",
+      "type": "scrape",
+      "description": "Scraped successfully. Found 1 new chapter(s): Ch. 123.",
+      "details": {
+        "newChaptersCount": 1,
+        "newChapterNumbers": [
+          123
+        ],
+        "totalChapters": 126
+      }
     }
   ]
 }
