@@ -2,8 +2,8 @@
   "manga_title": "Kagurabachi",
   "manga_slug": "w5baek-kagurabachi",
   "manga_url": "https://www.mangaedge.com/manga/w5baek-kagurabachi/",
-  "cover_url": "/covers/bb/5b565a4b590dbf326c75184b861d4b.jpg?v1779965678576",
-  "alternative_titles": "Кагурабати, カグラバチ, קאגורהבאצ&#039;י, Kagura Bowl, Kagura-bachi",
+  "cover_url": "/covers/bb/5b565a4b590dbf326c75184b861d4b.jpg?v1780798642740",
+  "alternative_titles": "カグラバチ, Кагурабати, קאגורהבאצ&#039;י, Kagura Bowl, Kagura-bachi",
   "type": "Manga",
   "status": "Ongoing",
   "authors": [
@@ -17,8 +17,34 @@
     "Tragedy"
   ],
   "synopsis": "As a young boy, Chihiro trains every day under his father to become a swordsmith.\nAlthough different in temperament, the two spend peaceful days laughing and working together.\nBut one day, tragedy strikes.\nNow Chihiro burns with hatred and sets out to exact revenge.\nFollowing clues left behind by a ruthless yakuza organization, Chihiro confronts the Hishaku, a deadly group of sorcerers that may be behind his father’s murder!",
-  "scraped_at": "2026-06-02T08:59:23.526Z",
+  "scraped_at": "2026-06-17T10:43:34.043Z",
   "chapters": [
+    {
+      "chapter_number": 124,
+      "chapter_title": "Ch. 124",
+      "chapter_url": "https://www.mangaedge.com/manga/w5baek-kagurabachi/124/",
+      "image_urls": [
+        "https://s11-95168.t34798ndc.com/DECuafwQikYbo7gW2/6n0c6/EN/pS/pp/SU/gS/pN/UO/ZS/Y1/Ny/b1/gg/gE/ZO/Sy/9g/NE-EBSEOUNNSZUNU.hxyT.jpeg",
+        "https://s11-95168.t34798ndc.com/V1T4Sa/Ii40I/FS/CZ/CC/ZT/1Z/CS/TQ/3Z/ke/Sg/Ve/11/1F/3Q/Zg/o1/So-FDZFQTSSZ3TST.aAgB.jpeg",
+        "https://s11-95168.t34798ndc.com/Mp705ukltTI3OrY6yv/8OVa8/1T/bE/bb/Ek/lE/bT/kU/3E/Jj/T4/xj/ll/l1/3U/E4/Il/T3-1NE1UkTTE3kTk.Md4F.jpeg",
+        "https://s11-95168.t34798ndc.com/5VUkAi4JSITC8/CwUjC/FN/mP/mm/Pd/ZP/mN/d0/VP/Wl/N2/Tl/ZZ/ZF/V0/P2/IZ/N0-FMPF0dNNPVdNd.x42o.jpeg",
+        "https://s11-95168.t34798ndc.com/np1bqEZedkA/t9lnt/VT/34/33/4x/w4/3T/xU/Q4/5p/Ti/mp/ww/wV/QU/4i/dw/Tx-V04VUxTT4QxTx.MGiW.jpeg",
+        "https://s11-95168.t34798ndc.com/jVZkBPw/6FXP6/VR/N3/NN/30/l3/NR/0U/K3/aJ/Ro/YJ/ll/lV/KU/3o/hl/RE-Vm3VU0RR3K0R0.H1oG.jpeg",
+        "https://s11-95168.t34798ndc.com/oA4NmbaRXr8ks/lNPYl/1R/rQ/rr/QG/WQ/rR/Gx/0Q/j2/Rv/42/WW/W1/0x/Qv/kW/RB-1BQ1xGRRQ0GRG.pavb.jpeg",
+        "https://s11-95168.t34798ndc.com/MnctYa4oyJx8OqmbzkNi/sNU5s/ER/Yo/YY/od/Wo/YR/dV/Go/30/Ra/j0/WW/WE/GV/oa/lW/Ro-EToEVdRRoGdRd.tKaZ.jpeg",
+        "https://s11-95168.t34798ndc.com/arPfMD2qOoXjvJAW6lB/5pMG5/kV/3l/33/lE/Xl/3V/EU/2l/Lh/V0/Wh/XX/Xk/2U/l0/YX/VL-kSlkUEVVl2EVE.QJ0o.jpeg",
+        "https://s11-95168.t34798ndc.com/3tEDr0Of5e9IM7i/PJU6P/TW/0E/00/EV/iE/0W/VN/DE/ho/WH/eo/ii/iT/DN/EH/Fi/TW-TZETNVWWEDVWV.ylHG.jpeg",
+        "https://s11-95168.t34798ndc.com/b6dICG9pmYu5M8DWfer/uOPwu/FT/1R/11/RV/XR/1T/VU/aR/z0/Tm/K0/XX/XF/aU/Rm/lX/FF-F4RFUVTTRaVTV.6Mm3.jpeg",
+        "https://s11-95168.t34798ndc.com/hHbEWVgIkuz87Jj5rf/yaNXy/UW/BO/BB/O0/TO/BW/0Q/2O/VR/WF/JR/TT/TU/2Q/OF/sT/Us-U4OUQ0WWO20W0.bgF3.jpeg",
+        "https://s11-95168.t34798ndc.com/hyQ0kVrGJjg84/odNmo/DM/Gp/GG/pF/Hp/GM/FW/Vp/Zj/Mb/1j/HH/HD/VW/pb/RH/DV-DkpDWFMMpVFMF.IBbS.jpeg",
+        "https://s11-95168.t34798ndc.com/ealcWI9/gyG5g/VM/Kw/KK/wR/Uw/KM/R1/Sw/Zp/Mh/ap/UU/UV/S1/wh/FU/V1-VTwV1RMMwSRMR.skhX.jpeg",
+        "https://s11-95168.t34798ndc.com/QV7L0Kl/6T3p6/FV/cX/cc/Xl/UX/cV/lD/yX/Nw/V0/hw/UU/UF/yD/X0/MU/Fl-FWXFDlVVXylVl.2O0J.jpeg",
+        "https://s11-95168.t34798ndc.com/KLwUVu3aO/PnGhP/UW/dV/dd/VZ/EV/dW/ZR/zV/eo/WY/ko/EE/EU/zR/VY/sE/UF-U1VURZWWVzZWZ.HwYD.jpeg",
+        "https://s11-95168.t34798ndc.com/n39RXqiB/xldgx/1S/jN/jj/N0/mN/jS/0R/aN/Fq/Sp/Xq/mm/m1/aR/Np/Jm/1w-1wN1R0SSNa0S0.nYpM.jpeg",
+        "https://s11-95168.t34798ndc.com/qMDjpglEX4O/GwNPG/TQ/9Z/99/ZV/dZ/9Q/VU/KZ/W6/QY/26/dd/dT/KU/ZY/Jd/TZ-TlZTUVQQZKVQV.eHYB.jpeg",
+        "https://s11-95168.t34798ndc.com/LRzWntm8/PBW3P/VO/Sw/SS/wJ/lw/SO/J0/Dw/d2/OM/62/ll/lV/D0/wM/Zl/Vd-VUwV0JOOwDJOJ.NkMe.jpeg"
+      ]
+    },
     {
       "chapter_number": 123,
       "chapter_title": "Ch. 123",
