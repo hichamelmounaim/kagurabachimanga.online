@@ -439,11 +439,11 @@ const Home: React.FC = () => {
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {[
-            { name: 'Blue Lock', url: 'https://readbluelockmanga.online/', desc: 'Soccer & ego battle', emoji: '⚽' },
-            { name: 'Dandadan', url: 'https://readdandadanmanga.online/', desc: 'Aliens & ghosts chaos', emoji: '👾' },
-            { name: 'Gachiakuta', url: 'https://readgachiakutamanga.online/', desc: 'Trash-powered warrior', emoji: '🗑️' },
-            { name: 'Nano Machine', url: 'https://nanomachinemanga.online/', desc: 'Futuristic murim rise', emoji: '⚙️' },
-            { name: 'Kingdom', url: 'https://readkingdommanga.online/', desc: '876 ch. epic history', emoji: '⚔️' },
+            { name: 'Blue Lock', url: 'https://www.readbluelockmanga.online/', desc: 'Soccer & ego battle', emoji: '⚽' },
+            { name: 'Dandadan', url: 'https://www.readdandadanmanga.online/', desc: 'Aliens & ghosts chaos', emoji: '👾' },
+            { name: 'Gachiakuta', url: 'https://www.readgachiakutamanga.online/', desc: 'Trash-powered warrior', emoji: '🗑️' },
+            { name: 'Nano Machine', url: 'https://www.nanomachinemanga.online/', desc: 'Futuristic murim rise', emoji: '⚙️' },
+            { name: 'Kingdom', url: 'https://www.readkingdommanga.online/', desc: '876 ch. epic history', emoji: '⚔️' },
           ].map(site => (
             <a key={site.url} href={site.url} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 p-5 bg-white/3 border border-white/5 rounded-xl hover:border-bb-blue/30 hover:bg-bb-blue/5 transition-all text-center">
               <span className="text-3xl">{site.emoji}</span>

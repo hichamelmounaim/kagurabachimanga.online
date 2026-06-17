@@ -7,11 +7,11 @@ import { useManga } from '../context/MangaContext';
 import { Chapter } from '../types';
 
 const SISTER_SITES = [
-  { name: 'Blue Lock Manga', url: 'https://readbluelockmanga.online/', desc: 'Isagi and 300 strikers fight for the top spot in Japan.' },
-  { name: 'Dandadan Manga', url: 'https://readdandadanmanga.online/', desc: 'Aliens, ghosts, and supernatural chaos by Tatsu Yukinobu.' },
-  { name: 'Gachiakuta Manga', url: 'https://readgachiakutamanga.online/', desc: 'Rudo fights to survive in the Pit with trash-powered abilities.' },
-  { name: 'Nano Machine Manga', url: 'https://nanomachinemanga.online/', desc: 'Cheon Yeo-Woon rises through the Demonic Cult with a nano machine.' },
-  { name: 'Kingdom Manga', url: 'https://readkingdommanga.online/', desc: 'Xin and Zheng unify ancient China in 876+ chapters.' },
+  { name: 'Blue Lock Manga', url: 'https://www.readbluelockmanga.online/', desc: 'Isagi and 300 strikers fight for the top spot in Japan.' },
+  { name: 'Dandadan Manga', url: 'https://www.readdandadanmanga.online/', desc: 'Aliens, ghosts, and supernatural chaos by Tatsu Yukinobu.' },
+  { name: 'Gachiakuta Manga', url: 'https://www.readgachiakutamanga.online/', desc: 'Rudo fights to survive in the Pit with trash-powered abilities.' },
+  { name: 'Nano Machine Manga', url: 'https://www.nanomachinemanga.online/', desc: 'Cheon Yeo-Woon rises through the Demonic Cult with a nano machine.' },
+  { name: 'Kingdom Manga', url: 'https://www.readkingdommanga.online/', desc: 'Xin and Zheng unify ancient China in 876+ chapters.' },
 ];
 
 const ChapterReader: React.FC = () => {

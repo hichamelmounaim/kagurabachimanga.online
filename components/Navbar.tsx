@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
     { name: 'Home', path: '/' },
     { name: 'All Chapters', path: '/manga' },
     { name: 'Characters', path: '/characters' },
-    { name: 'Read Blue Lock Manga', path: 'https://readbluelockmanga.online/', isExternal: true },
+    { name: 'Read Blue Lock Manga', path: 'https://www.readbluelockmanga.online/', isExternal: true },
   ];
 
   const isActive = (path: string) => location.pathname === path;
