@@ -101,6 +101,20 @@
       "date": "2026-06-17T10:43:37.947Z",
       "type": "manual_edit",
       "description": "Auto-Push: Successfully committed and pushed updates to GitHub repository (main branch)."
+    },
+    {
+      "id": "mcwttyz",
+      "date": "2026-06-26T15:37:06.055Z",
+      "type": "scrape",
+      "description": "Scraped successfully during bulk sync. Found 1 new chapter(s): Ch. 125.",
+      "details": {
+        "newChaptersCount": 1,
+        "newChapterNumbers": [
+          125
+        ],
+        "totalChapters": 128,
+        "bulkSync": true
+      }
     }
   ]
 }
